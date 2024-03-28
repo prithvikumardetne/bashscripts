@@ -9,14 +9,19 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
-- script: |
-    mkdir prithvi
-  displayName: "Prithvi Directory is getting created"
+stages:
+  - stage: "Build_Job" 
+    jobs:
+      - job: A
+        steps:
+          - script: |
+              mkdir prithvi
+            displayName: "Prithvi Directory is getting created"
+
+      - job: B
+        steps:
+          - script: |
+              ls -ltr
+            displayName: "Listing Files"
+
