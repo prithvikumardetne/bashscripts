@@ -24,4 +24,17 @@ stages:
           - script: |
               ls -ltr
             displayName: "Listing Files"
+  - stage: "Deploy_Job" 
+    jobs:
+      - job: C
+        steps:
+          - script: |
+              mkdir prithvi
+            displayName: "Prithvi Directory is getting created"
+
+      - job: D
+        steps:
+          - script: |
+              ls -ltr
+            displayName: "Listing Files"
 
