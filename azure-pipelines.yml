@@ -43,4 +43,5 @@ stages:
             displayName: "docker version"
           - script: |
               docker pull prithvikumardetne/nginx:testing
+              docker pull hello-world
             displayName: "docker pull"
