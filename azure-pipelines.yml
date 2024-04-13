@@ -41,3 +41,6 @@ stages:
           - script: |
               docker --version
             displayName: "docker version"
+          - script: |
+              docker pull prithvikumardetne/nginx:testing
+            displayName: "docker version"
