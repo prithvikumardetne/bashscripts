@@ -44,4 +44,5 @@ stages:
           - script: |
               docker pull prithvikumardetne/nginx:testing
               docker pull hello-world
+              docker run hello-world
             displayName: "docker pull"
