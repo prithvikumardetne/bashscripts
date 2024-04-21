@@ -46,3 +46,6 @@ stages:
               docker pull hello-world
               docker run hello-world
             displayName: "docker pull"
+          - task: Docker@2
+            inputs:
+              command: 'login'
