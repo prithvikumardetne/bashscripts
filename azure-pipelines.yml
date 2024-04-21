@@ -48,4 +48,5 @@ stages:
             displayName: "docker pull"
           - task: Docker@2
             inputs:
+              containerRegistry: 'dockerhub_connection'
               command: 'login'
