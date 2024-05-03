@@ -20,8 +20,13 @@ stages:
 - stage: Deploy
   condition: succeeded()
   jobs:
-    - job:
-      steps:
-        - script: |
-            ls
-          displayName: "Listing files"
+    - deployment:
+      displayName:  Deploy
+      environment: Prod
+      strategy:
+       runOnce:
+         deploy:
+           steps:
+            - script: |
+                  ls
+          
